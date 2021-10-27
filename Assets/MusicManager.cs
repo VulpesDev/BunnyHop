@@ -85,5 +85,16 @@ public class MusicManager : MonoBehaviour
         ASound.Play();
         Sound.AddComponent<AudiosDefault>();
     }
+    static public void BattleHorn()
+    {
+        GameObject Sound = new GameObject();
+        Sound.transform.parent = player;
+        AudioSource ASound = Sound.AddComponent<AudioSource>();
+        ASound.clip = Resources.Load("Sounds/Ambient/BattleHorns") as AudioClip;
+        ASound.pitch = Random.Range(0.9f, 1.2f);
+        instance.StartCoroutine(AddScarePoints(0.3f, 1f));
+        ASound.Play();
+        Sound.AddComponent<AudiosDefault>();
+    }
     #endregion
 }

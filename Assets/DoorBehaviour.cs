@@ -9,7 +9,7 @@ public class DoorBehaviour : MonoBehaviour
     float zRotation;
     void Update()
     {
-        zRotation = Mathf.Rad2Deg * transform.rotation.z;
+        zRotation = Mathf.Rad2Deg * transform.localRotation.z;
 
 
         if((zRotation > 16f || zRotation < -16f) && canSoundEnd)
@@ -21,7 +21,7 @@ public class DoorBehaviour : MonoBehaviour
         {
             canSoundEnd = true;
         }
-        if(zRotation > -1f && zRotation < 1f)
+        if(zRotation > -0.5f && zRotation < 0.5f)
         {
             if (canSoundClose)
             {
