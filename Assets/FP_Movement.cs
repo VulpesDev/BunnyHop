@@ -34,6 +34,8 @@ public class FP_Movement : FP
         StepSim(); // Simulating Steps
     }
     bool goUp = false;
+    bool once;
+    float maxYup = 0.435f;
     void StepSim()
     {
         currentPos = transform.position;
@@ -56,6 +58,7 @@ public class FP_Movement : FP
         //}
         if (Mathf.Abs(rb.velocity.x) >= 0.001f || Mathf.Abs(rb.velocity.z) >= 0.001f)
         {
+            once = false;
             if (Mathf.Abs(currentPos.x - lastPos.x) >= metersToSkip || Mathf.Abs(currentPos.z - lastPos.z) >= metersToSkip)
             {
                 goUp = false;
@@ -66,9 +69,15 @@ public class FP_Movement : FP
         else
         {
             goUp = false;
+            if (!once)
+            {
+                MusicManager.StepSounds();
+                once = true;
+            }
         }
         if (goUp)
         {
+            if(cam.transform.localPosition.y <= maxYup)
             cam.transform.position += new Vector3(0, upWalkEffect * Time.deltaTime, 0);
         }
         else
