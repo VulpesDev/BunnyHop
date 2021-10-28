@@ -1252,11 +1252,11 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 3.816666603088379
+    m_Start: 3.75
     m_ClipIn: 0
-    m_Asset: {fileID: 7703144629740872889}
-    m_Duration: 1.1
-    m_TimeScale: 1
+    m_Asset: {fileID: 5317557134474604515}
+    m_Duration: 1.145833333333334
+    m_TimeScale: 0.7999999999999998
     m_ParentTrack: {fileID: -4555059683535237079}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
@@ -1318,8 +1318,8 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 3.816666603088379
-    m_DisplayName: OpenCage
+    m_PreExtrapolationTime: 3.75
+    m_DisplayName: Recorded (2)
   m_Markers:
     m_Objects: []
   m_InfiniteClipPreExtrapolation: 1
@@ -3643,6 +3643,28 @@ MonoBehaviour:
     volume: 1
     stereoPan: 0
     spatialBlend: 0
+--- !u!114 &5317557134474604515
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030f85c3f73729f4f976f66ffb23b875, type: 3}
+  m_Name: Recorded (2)
+  m_EditorClassIdentifier: 
+  m_Clip: {fileID: 6301362872225349854}
+  m_Position: {x: -1.274, y: 0.25, z: -5.8780003}
+  m_EulerAngles: {x: 270, y: 225.00005, z: 0}
+  m_UseTrackMatchFields: 1
+  m_MatchTargetFields: 63
+  m_RemoveStartOffset: 0
+  m_ApplyFootIK: 1
+  m_Loop: 0
+  m_Version: 1
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!114 &5721365797140170126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3924,7 +3946,7 @@ MonoBehaviour:
   m_OpenClipOffsetRotation: {x: 0, y: 0, z: 0, w: 1}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_ApplyOffsets: 0
---- !u!74 &7254904435888891915
+--- !u!74 &6301362872225349854
 AnimationClip:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3944,7 +3966,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0.0011598354, y: 0, z: -0.5743517}
+        value: {x: -0, y: 0.01588, z: 0.00015}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -3952,8 +3974,8 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.3333335
-        value: {x: 0.0011598354, y: 0.147, z: -0.5743517}
+        time: 0.2833333
+        value: {x: -0, y: 0.01588, z: 0.00683}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -3962,7 +3984,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.4166665
-        value: {x: 0.0011598354, y: 0.147, z: -0.5743517}
+        value: {x: 0, y: 0.01588, z: 0.00588}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -3970,8 +3992,8 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.0999999
-        value: {x: 0.0011598354, y: 1.077, z: -0.5743517}
+        time: 0.9166665
+        value: {x: 0, y: 0.01588, z: 0.01771}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -3981,7 +4003,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Cube (1)
+    path: Cage_door
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
@@ -3993,7 +4015,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2047710271
+      path: 446543072
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -4005,7 +4027,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.0999999
+    m_StopTime: 0.9166665
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -4026,7 +4048,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.0011598354
+        value: -0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4034,8 +4056,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.3333335
-        value: 0.0011598354
+        time: 0.2833333
+        value: -0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4044,7 +4066,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.4166665
-        value: 0.0011598354
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4052,8 +4074,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0999999
-        value: 0.0011598354
+        time: 0.9166665
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4064,7 +4086,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Cube (1)
+    path: Cage_door
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4072,7 +4094,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: 0.01588
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4080,8 +4102,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.3333335
-        value: 0.147
+        time: 0.2833333
+        value: 0.01588
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4090,7 +4112,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.4166665
-        value: 0.147
+        value: 0.01588
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4098,8 +4120,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0999999
-        value: 1.077
+        time: 0.9166665
+        value: 0.01588
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4110,7 +4132,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Cube (1)
+    path: Cage_door
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4118,7 +4140,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0.5743517
+        value: 0.00015
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4126,8 +4148,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.3333335
-        value: -0.5743517
+        time: 0.2833333
+        value: 0.00683
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4136,7 +4158,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.4166665
-        value: -0.5743517
+        value: 0.00588
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4144,8 +4166,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0999999
-        value: -0.5743517
+        time: 0.9166665
+        value: 0.01771
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4156,7 +4178,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Cube (1)
+    path: Cage_door
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves: []
@@ -4178,28 +4200,6 @@ MonoBehaviour:
   m_Clip: {fileID: -5072475654440117416}
   m_Position: {x: -0.32600015, y: 1.286, z: -4.699}
   m_EulerAngles: {x: 36.45171, y: 222.88779, z: 357.16}
-  m_UseTrackMatchFields: 1
-  m_MatchTargetFields: 63
-  m_RemoveStartOffset: 0
-  m_ApplyFootIK: 1
-  m_Loop: 0
-  m_Version: 1
-  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
---- !u!114 &7703144629740872889
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 030f85c3f73729f4f976f66ffb23b875, type: 3}
-  m_Name: Recorded (2)
-  m_EditorClassIdentifier: 
-  m_Clip: {fileID: 7254904435888891915}
-  m_Position: {x: -1.319, y: 0.25, z: -5.908}
-  m_EulerAngles: {x: 0, y: 213.88489, z: 0}
   m_UseTrackMatchFields: 1
   m_MatchTargetFields: 63
   m_RemoveStartOffset: 0

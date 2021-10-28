@@ -41,6 +41,22 @@ public class FP_Interaction : FP
                     cage.SetActive(false); cagefake.SetActive(true);
                     GameObject.Find("Cutscenes").transform.GetChild(0).gameObject.SetActive(true);
                 }
+                if (ray.collider.CompareTag("Boombox"))
+                {
+                   
+                    for (int i = 0; i < 3; i++)
+                    {
+                        if (ray.transform.GetChild(i).gameObject.activeSelf)
+                        {
+                            ray.transform.GetChild(i).gameObject.SetActive(false);
+                        }
+                        else
+                        {
+                            ray.transform.GetChild(i).gameObject.SetActive(true);
+                        }
+                    }
+                    MusicManager.ButtonPush();
+                }
             }
         }
         else

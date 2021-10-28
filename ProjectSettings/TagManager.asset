@@ -9,6 +9,7 @@ TagManager:
   - Wardrobe
   - BroomRoom
   - Cage
+  - Boombox
   layers:
   - Default
   - TransparentFX

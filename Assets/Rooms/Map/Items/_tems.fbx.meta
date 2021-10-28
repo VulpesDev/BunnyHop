@@ -3,7 +3,37 @@ guid: 7ee12003122505c499d56d92b9d80cf3
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 3f6bb6fa89814184f870c59b77803323, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: c2aeb04064c26fa46bee60d8ddcde027, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: 312a46b0adbb1944793f8e7789209118, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 1708
+    second: {fileID: 2800000, guid: cf43cf5f8dc30294e8b932445d15adaa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: download
+    second: {fileID: 2800000, guid: ea55ffcaa1cf3794fa55d0d8a3c98b74, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: istockphoto-1153356475-1024x1024
+    second: {fileID: 2800000, guid: 6b623bf421ba1564da36effd8fcd94ad, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0

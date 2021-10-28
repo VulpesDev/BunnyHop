@@ -81,6 +81,16 @@ public class MusicManager : MonoBehaviour
         ASound.Play();
         Sound.AddComponent<AudiosDefault>();
     }
+    static public void ButtonPush()
+    {
+        GameObject Sound = new GameObject();
+        Sound.transform.parent = interactions;
+        AudioSource ASound = Sound.AddComponent<AudioSource>();
+        ASound.clip = Resources.Load("Sounds/Enviroment/ButtonPush") as AudioClip;
+        ASound.pitch = Random.Range(0.9f, 1.2f);
+        ASound.Play();
+        Sound.AddComponent<AudiosDefault>();
+    }
     #endregion
 
     #region Ambient
