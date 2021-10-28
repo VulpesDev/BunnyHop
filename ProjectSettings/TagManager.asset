@@ -8,6 +8,7 @@ TagManager:
   - Door
   - Wardrobe
   - BroomRoom
+  - Cage
   layers:
   - Default
   - TransparentFX

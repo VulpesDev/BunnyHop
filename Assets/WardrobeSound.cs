@@ -4,16 +4,6 @@ using UnityEngine;
 
 public class WardrobeSound : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void PlayJumpscare()
     {
         MusicManager.JumpScare();

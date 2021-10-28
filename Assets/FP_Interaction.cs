@@ -7,6 +7,7 @@ public class FP_Interaction : FP
     [SerializeField] Transform rayTr;
     [SerializeField] float distance;
     [SerializeField] LayerMask layerCode;
+    [SerializeField] GameObject cage, cagefake;
     void Start()
     {
 
@@ -34,6 +35,11 @@ public class FP_Interaction : FP
                 if (ray.collider.CompareTag("Door"))
                 {
                     ray.collider.gameObject.GetComponent<DoorBehaviour>().OpenDoor();
+                }
+                if(ray.collider.CompareTag("Cage"))
+                {
+                    cage.SetActive(false); cagefake.SetActive(true);
+                    GameObject.Find("Cutscenes").transform.GetChild(0).gameObject.SetActive(true);
                 }
             }
         }
