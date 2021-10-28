@@ -29,9 +29,12 @@ public class FP_Interaction : FP
                 }
             }
 
-            if(ray.collider.CompareTag("Door") && Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                ray.collider.gameObject.GetComponent<DoorBehaviour>().OpenDoor();
+                if (ray.collider.CompareTag("Door"))
+                {
+                    ray.collider.gameObject.GetComponent<DoorBehaviour>().OpenDoor();
+                }
             }
         }
         else

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
-    //ADD scare meter a.k.a. if scare meter is 1, volume of heartbeat is 1. Different sounds add scare points
 
     static public Transform ambient, player, interactions;
     static public AudioSource heartBeat;
@@ -62,10 +61,22 @@ public class MusicManager : MonoBehaviour
     {
         GameObject Sound = new GameObject();
         Sound.transform.position = position;
-        Sound.transform.parent = player;
+        Sound.transform.parent = interactions;
         AudioSource ASound = Sound.AddComponent<AudioSource>();
         ASound.spatialBlend = 1;
         ASound.clip = Resources.Load("Sounds/Enviroment/Door/Door" + nameOfDoorSound) as AudioClip;
+        ASound.pitch = Random.Range(0.9f, 1.2f);
+        ASound.Play();
+        Sound.AddComponent<AudiosDefault>();
+    }
+    static public void BroomFall(Vector3 position)
+    {
+        GameObject Sound = new GameObject();
+        Sound.transform.position = position;
+        Sound.transform.parent = interactions;
+        AudioSource ASound = Sound.AddComponent<AudioSource>();
+        ASound.spatialBlend = 1;
+        ASound.clip = Resources.Load("Sounds/Enviroment/StickFall") as AudioClip;
         ASound.pitch = Random.Range(0.9f, 1.2f);
         ASound.Play();
         Sound.AddComponent<AudiosDefault>();
@@ -76,7 +87,7 @@ public class MusicManager : MonoBehaviour
     static public void Clown()
     {
         GameObject Sound = new GameObject();
-        Sound.transform.parent = player;
+        Sound.transform.parent = ambient;
         AudioSource ASound = Sound.AddComponent<AudioSource>();
         ASound.spatialBlend = 1;
         ASound.clip = Resources.Load("Sounds/Ambient/ClownLaugh") as AudioClip;
@@ -88,7 +99,7 @@ public class MusicManager : MonoBehaviour
     static public void BattleHorn()
     {
         GameObject Sound = new GameObject();
-        Sound.transform.parent = player;
+        Sound.transform.parent = ambient;
         AudioSource ASound = Sound.AddComponent<AudioSource>();
         ASound.clip = Resources.Load("Sounds/Ambient/BattleHorns") as AudioClip;
         ASound.pitch = Random.Range(0.9f, 1.2f);
@@ -96,5 +107,18 @@ public class MusicManager : MonoBehaviour
         ASound.Play();
         Sound.AddComponent<AudiosDefault>();
     }
+    static public void JumpScare()
+    {
+        GameObject Sound = new GameObject();
+        Sound.transform.parent = ambient;
+        AudioSource ASound = Sound.AddComponent<AudioSource>();
+        ASound.clip = Resources.Load("Sounds/Ambient/JumpScare") as AudioClip;
+        ASound.pitch = Random.Range(0.9f, 1.2f);
+        ASound.volume = 0.2f;
+        instance.StartCoroutine(AddScarePoints(1f, 1f));
+        ASound.Play();
+        Sound.AddComponent<AudiosDefault>();
+    }
+
     #endregion
 }

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - InteractionUI
   - Door
+  - Wardrobe
+  - BroomRoom
   layers:
   - Default
   - TransparentFX

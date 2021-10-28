@@ -35,7 +35,7 @@ public class FP_Movement : FP
     }
     bool goUp = false;
     bool once;
-    float maxYup = 0.435f;
+    float maxYup = 0.37f;
     void StepSim()
     {
         currentPos = transform.position;
