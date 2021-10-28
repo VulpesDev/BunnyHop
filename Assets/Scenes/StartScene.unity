@@ -2208,7 +2208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5055974473620593095, guid: 29ac830ce71dd7f4f998d1278203639e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.05
+      value: -5.38
       objectReference: {fileID: 0}
     - target: {fileID: 5055974473620593095, guid: 29ac830ce71dd7f4f998d1278203639e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2216,11 +2216,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5055974473620593095, guid: 29ac830ce71dd7f4f998d1278203639e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.17
+      value: -0.23
       objectReference: {fileID: 0}
     - target: {fileID: 5055974473620593095, guid: 29ac830ce71dd7f4f998d1278203639e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.94923204
+      value: 0.93907064
       objectReference: {fileID: 0}
     - target: {fileID: 5055974473620593095, guid: 29ac830ce71dd7f4f998d1278203639e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2228,7 +2228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5055974473620593095, guid: 29ac830ce71dd7f4f998d1278203639e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.31457666
+      value: -0.34372416
       objectReference: {fileID: 0}
     - target: {fileID: 5055974473620593095, guid: 29ac830ce71dd7f4f998d1278203639e, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2240,7 +2240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5055974473620593095, guid: 29ac830ce71dd7f4f998d1278203639e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 36.671
+      value: -40.208
       objectReference: {fileID: 0}
     - target: {fileID: 5055974473620593095, guid: 29ac830ce71dd7f4f998d1278203639e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -8208,6 +8208,7 @@ GameObject:
   - component: {fileID: 6486538097704375401}
   - component: {fileID: 6486538097704375402}
   - component: {fileID: 6486538097704375403}
+  - component: {fileID: 6486538097704375404}
   m_Layer: 0
   m_Name: Wardrobe_body
   m_TagString: Wardrobe
@@ -8271,8 +8272,21 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.032950006, y: 0.025027342, z: 0.020439092}
-  m_Center: {x: -0.013475001, y: -0.005459901, z: 0.00021954656}
+  m_Size: {x: 0.008998902, y: 0.023288421, z: 0.020439092}
+  m_Center: {x: -0.015739331, y: -0.0045904615, z: 0.00021954655}
+--- !u!65 &6486538097704375404
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6486538097704375399}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.025168236, y: 0.013297432, z: 0.02}
+  m_Center: {x: -0.009584124, y: 2.1867749e-16, z: -1.3034194e-23}
 --- !u!4 &6526613092987355998
 Transform:
   m_ObjectHideFlags: 0
