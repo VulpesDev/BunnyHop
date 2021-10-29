@@ -117,6 +117,16 @@ public class MusicManager : MonoBehaviour
         ASound.Play();
         Sound.AddComponent<AudiosDefault>();
     }
+    static public void ScaryViolinsShort()
+    {
+        GameObject Sound = new GameObject();
+        Sound.transform.parent = ambient;
+        AudioSource ASound = Sound.AddComponent<AudioSource>();
+        ASound.clip = Resources.Load("Sounds/Ambient/ScaryViolinsShort") as AudioClip;
+        instance.StartCoroutine(AddScarePoints(0.8f, 1f));
+        ASound.Play();
+        Sound.AddComponent<AudiosDefault>();
+    }
     static public void JumpScare()
     {
         GameObject Sound = new GameObject();

@@ -30,29 +30,34 @@ public class FP_Interaction : FP
                 }
             }
 
+            if(target.CompareTag("Wardrobe"))
+            {
+                target.GetComponent<Animator>().SetBool("Open", true);
+            }
+
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (ray.collider.CompareTag("Door"))
+                if (target.CompareTag("Door"))
                 {
-                    ray.collider.gameObject.GetComponent<DoorBehaviour>().OpenDoor();
+                    target.GetComponent<DoorBehaviour>().OpenDoor();
                 }
-                if(ray.collider.CompareTag("Cage"))
+                if(target.CompareTag("Cage"))
                 {
                     cage.SetActive(false); cagefake.SetActive(true);
                     GameObject.Find("Cutscenes").transform.GetChild(0).gameObject.SetActive(true);
                 }
-                if (ray.collider.CompareTag("Boombox"))
+                if (target.CompareTag("Boombox"))
                 {
                    
                     for (int i = 0; i < 3; i++)
                     {
-                        if (ray.transform.GetChild(i).gameObject.activeSelf)
+                        if (targetTr.GetChild(i).gameObject.activeSelf)
                         {
-                            ray.transform.GetChild(i).gameObject.SetActive(false);
+                            targetTr.GetChild(i).gameObject.SetActive(false);
                         }
                         else
                         {
-                            ray.transform.GetChild(i).gameObject.SetActive(true);
+                            targetTr.GetChild(i).gameObject.SetActive(true);
                         }
                     }
                     MusicManager.ButtonPush();

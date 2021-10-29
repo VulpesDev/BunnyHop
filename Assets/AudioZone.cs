@@ -7,12 +7,18 @@ public class AudioZone : MonoBehaviour
     public static int zonesPassed = 0;
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            if(name == "BattleHorn")
+            if (name == "BattleHorn")
             {
-                if(zonesPassed == 0)
-                MusicManager.BattleHorn();
+                if (zonesPassed == 0)
+                    MusicManager.BattleHorn();
+                zonesPassed++;
+            }
+            if (name == "ScaryViolinShort")
+            {
+                if (zonesPassed == 0)
+                    MusicManager.ScaryViolinsShort();
                 zonesPassed++;
             }
         }
