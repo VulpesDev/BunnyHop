@@ -123,6 +123,19 @@ public class MusicManager : MonoBehaviour
         Sound.transform.parent = ambient;
         AudioSource ASound = Sound.AddComponent<AudioSource>();
         ASound.clip = Resources.Load("Sounds/Ambient/ScaryViolinsShort") as AudioClip;
+        ASound.volume = 0.5f;
+        instance.StartCoroutine(AddScarePoints(0.8f, 1f));
+        ASound.Play();
+        Sound.AddComponent<AudiosDefault>();
+    }
+    static public void ClownLaugh()
+    {
+        GameObject Sound = new GameObject();
+        Sound.transform.parent = ambient;
+        AudioSource ASound = Sound.AddComponent<AudioSource>();
+        ASound.clip = Resources.Load("Sounds/Ambient/ClownLaugh") as AudioClip;
+        ASound.panStereo = 1;
+        ASound.volume = 1f;
         instance.StartCoroutine(AddScarePoints(0.8f, 1f));
         ASound.Play();
         Sound.AddComponent<AudiosDefault>();

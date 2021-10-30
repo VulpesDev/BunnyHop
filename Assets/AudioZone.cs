@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class AudioZone : MonoBehaviour
 {
-    public static int zonesPassed = 0;
+    bool horn, violin, laugh;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            if (name == "BattleHorn")
+            if (name == "BattleHorn" && !horn)
             {
-                if (zonesPassed == 0)
-                    MusicManager.BattleHorn();
-                zonesPassed++;
+                MusicManager.BattleHorn();
+                horn = true;
             }
-            if (name == "ScaryViolinShort")
+            if (name == "ScaryViolinShort" && !violin)
             {
-                if (zonesPassed == 0)
-                    MusicManager.ScaryViolinsShort();
-                zonesPassed++;
+                MusicManager.ScaryViolinsShort();
+                violin = true;
+            }
+            if (name == "ClownLaugh" && !laugh)
+            {
+                MusicManager.ClownLaugh();
+                laugh = true;
             }
         }
     }
