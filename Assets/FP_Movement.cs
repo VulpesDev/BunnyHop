@@ -7,7 +7,7 @@ public class FP_Movement : FP
     [Header("Movement Settings")]
     float horizontal, vertical;
     [SerializeField] float acc = 5f, maxSpeed = 1.4f, baseSpeed, timeModifier = 100f;
-    float dirSpeedMod = 2f;
+    //float dirSpeedMod = 2f;
 
     Vector3 camStartPos;
 
@@ -56,7 +56,7 @@ public class FP_Movement : FP
         //{
         //    cam.transform.position -= new Vector3(0, downWalkEffect * Time.deltaTime, 0); // reset
         //}
-        if (Mathf.Abs(rb.velocity.x) >= 0.001f || Mathf.Abs(rb.velocity.z) >= 0.001f)
+        if (Mathf.Abs(rb.velocity.x) >= 0.01f || Mathf.Abs(rb.velocity.z) >= 0.01f)
         {
             once = false;
             if (Mathf.Abs(currentPos.x - lastPos.x) >= metersToSkip || Mathf.Abs(currentPos.z - lastPos.z) >= metersToSkip)
@@ -101,16 +101,13 @@ public class FP_Movement : FP
         if (vertical >= 0.5f) // client is pressing "w"
         {
             //Move forwards
-            maxSpeed = baseSpeed;
 
             if (Mathf.Abs(rb.velocity.x) <= maxSpeed && Mathf.Abs(rb.velocity.z) <= maxSpeed)
                 rb.AddForce(transform.forward * acc * Time.deltaTime * timeModifier);
         }
-        if (vertical <= -0.5f) // client is pressing "s"
+        else if (vertical <= -0.5f) // client is pressing "s"
         {
             //Move backwards
-            maxSpeed = baseSpeed;
-            maxSpeed /= dirSpeedMod;
 
             if (Mathf.Abs(rb.velocity.x) <= maxSpeed && Mathf.Abs(rb.velocity.z) <= maxSpeed)
                 rb.AddForce(-transform.forward * acc * Time.deltaTime * timeModifier);
@@ -119,17 +116,13 @@ public class FP_Movement : FP
         if (horizontal >= 0.5f) // client is pressing "d"
         {
             //Move right
-            maxSpeed = baseSpeed;
-            maxSpeed /= dirSpeedMod;
 
             if (Mathf.Abs(rb.velocity.x) <= maxSpeed && Mathf.Abs(rb.velocity.z) <= maxSpeed)
                 rb.AddForce(transform.right * acc * Time.deltaTime * timeModifier);
         }
-        if (horizontal <= -0.5f) // client is pressing "a"
+        else if (horizontal <= -0.5f) // client is pressing "a"
         {
             //Move left
-            maxSpeed = baseSpeed;
-            maxSpeed /= dirSpeedMod;
 
             if (Mathf.Abs(rb.velocity.x) <= maxSpeed && Mathf.Abs(rb.velocity.z) <= maxSpeed)
                 rb.AddForce(-transform.right * acc * Time.deltaTime * timeModifier);

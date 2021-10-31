@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioZone : MonoBehaviour
 {
-    bool horn, violin, laugh, change;
+    bool horn, violin, laugh, change, door, door2;
     [SerializeField]GameObject room1, room2;
     private void OnTriggerEnter(Collider other)
     {
@@ -30,6 +30,23 @@ public class AudioZone : MonoBehaviour
                 room1.SetActive(false);
                 room2.SetActive(true);
             }
+            if(name == "DoorStart" && !door)
+            {
+                Debug.Log("DoorSound");
+                MusicManager.Door("End", GameObject.FindGameObjectWithTag("Player").transform.position);
+                Invoke("DoorSound", 2f);
+                door = true;
+            }
+            if (name == "DoorStart2" && !door2)
+            {
+                GameObject.Find("Footsteps").GetComponent<AudioSource>().enabled = true;
+                GameObject.Find("Footsteps").transform.GetChild(0).gameObject.SetActive(true);
+                door2 = true;
+            }
         }
+    }
+    void DoorSound()
+    {
+        MusicManager.Door("Close", GameObject.FindGameObjectWithTag("Player").transform.position);
     }
 }

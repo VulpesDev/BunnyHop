@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class FP_Aim : FP
 {
-    public static float mouseSensitivity = 100f;
+    public static float mouseSensitivity;
     float xRotation = 0f;
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+
+
+#if UNITY_EDITOR
+        mouseSensitivity = 100f; //DEBUG
+#endif
     }
 
     void Update()

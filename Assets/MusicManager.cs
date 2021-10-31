@@ -96,6 +96,17 @@ public class MusicManager : MonoBehaviour
         ASound.Play();
         Sound.AddComponent<AudiosDefault>();
     }
+    static public void Page()
+    {
+        GameObject Sound = new GameObject();
+        Sound.transform.parent = interactions;
+        AudioSource ASound = Sound.AddComponent<AudioSource>();
+        ASound.clip = Resources.Load("Sounds/Enviroment/Page") as AudioClip;
+        ASound.outputAudioMixerGroup = Resources.Load<AudioMixer>("Sounds/Master").FindMatchingGroups("Master")[0];
+        ASound.pitch = Random.Range(0.9f, 1.2f);
+        ASound.Play();
+        Sound.AddComponent<AudiosDefault>();
+    }
     #endregion
 
     #region Ambient

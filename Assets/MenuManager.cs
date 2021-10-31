@@ -11,6 +11,7 @@ public class MenuManager : MonoBehaviour
     {
         mixer = Resources.Load("Sounds/Master") as AudioMixer;
         SetVolume();
+        SetSensitivity();
     }
     public static void LoadScene(int index)
     {
@@ -26,17 +27,10 @@ public class MenuManager : MonoBehaviour
     }
 
     float sensValue;
-    [SerializeField] InputField sensInputField;
+    [SerializeField] Slider sensSlider;
     public void SetSensitivity()
     {
-        string content = sensInputField.text;
-        content = content.Replace('.', ',');
-        if(content == "" || content == ",")
-        {
-            content = "1";
-        }
-        sensValue = float.Parse(content);
-
-        FP_Aim.mouseSensitivity *= sensValue;
+        sensValue = sensSlider.value;
+        FP_Aim.mouseSensitivity = sensValue;
     }
 }

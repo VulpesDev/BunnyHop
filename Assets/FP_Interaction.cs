@@ -7,13 +7,29 @@ public class FP_Interaction : FP
     [SerializeField] Transform rayTr;
     [SerializeField] float distance;
     [SerializeField] LayerMask layerCode;
-    [SerializeField] GameObject cage, cagefake;
+    [SerializeField] GameObject cage, cagefake, notepadUI, notepad;
     void Start()
     {
 
     }
+
+    void ActivateDelay()
+    {
+        MusicManager.Page();
+        notepadUI.SetActive(false);
+        notepad.SetActive(true);
+    }
+
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (notepadUI.activeSelf)
+            {
+                Invoke("ActivateDelay", 0.2f);
+            }
+        }
+
         RaycastHit ray;
         bool hit = Physics.Raycast(rayTr.position, rayTr.forward, out ray, distance, layerCode.value);
         if (hit)
@@ -30,7 +46,7 @@ public class FP_Interaction : FP
                 }
             }
 
-            if(target.CompareTag("Wardrobe"))
+            if (target.CompareTag("Wardrobe"))
             {
                 target.GetComponent<Animator>().SetBool("Open", true);
             }
@@ -41,14 +57,14 @@ public class FP_Interaction : FP
                 {
                     target.GetComponent<DoorBehaviour>().OpenDoor();
                 }
-                if(target.CompareTag("Cage"))
+                if (target.CompareTag("Cage"))
                 {
                     cage.SetActive(false); cagefake.SetActive(true);
                     GameObject.Find("Cutscenes").transform.GetChild(0).gameObject.SetActive(true);
                 }
                 if (target.CompareTag("Boombox"))
                 {
-                   
+
                     for (int i = 0; i < 3; i++)
                     {
                         if (targetTr.GetChild(i).gameObject.activeSelf)
@@ -62,16 +78,22 @@ public class FP_Interaction : FP
                     }
                     MusicManager.ButtonPush();
                 }
-                if(target.CompareTag("Bunny"))
+                if (target.CompareTag("Bunny"))
                 {
                     GameObject.Find("Cutscenes").transform.GetChild(1).gameObject.SetActive(true);
                 }
-                if(target.CompareTag("Ritual"))
+                if (target.CompareTag("Ritual"))
                 {
                     target.transform.GetChild(2).gameObject.SetActive(true);
 
                     Invoke("EndGame", 3f);
                     //END GAME
+                }
+                if (target.CompareTag("Notepad"))
+                {
+                    MusicManager.Page();
+                    notepadUI.SetActive(true);
+                    notepad.SetActive(false);
                 }
             }
         }

@@ -54,4 +54,19 @@ public class DoorBehaviour : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Player"))
+        {
+            GetComponent<HingeJoint>().useSpring = false;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            GetComponent<HingeJoint>().useSpring = true;
+        }
+    }
+
 }
