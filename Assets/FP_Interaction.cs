@@ -66,6 +66,13 @@ public class FP_Interaction : FP
                 {
                     GameObject.Find("Cutscenes").transform.GetChild(1).gameObject.SetActive(true);
                 }
+                if(target.CompareTag("Ritual"))
+                {
+                    target.transform.GetChild(2).gameObject.SetActive(true);
+
+                    Invoke("EndGame", 3f);
+                    //END GAME
+                }
             }
         }
         else
@@ -78,5 +85,10 @@ public class FP_Interaction : FP
             }
         }
         Debug.DrawRay(rayTr.position, rayTr.forward * distance, Color.red);
+    }
+
+    void EndGame()
+    {
+        MenuManager.LoadScene(2);
     }
 }

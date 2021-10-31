@@ -13,6 +13,7 @@ TagManager:
   - room2
   - room1
   - Bunny
+  - Ritual
   layers:
   - Default
   - TransparentFX

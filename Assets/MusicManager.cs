@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class MusicManager : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class MusicManager : MonoBehaviour
         Sound.transform.parent = player;
         AudioSource ASound = Sound.AddComponent<AudioSource>();
         ASound.clip = Resources.Load("Sounds/Player/Step1") as AudioClip;
+        ASound.outputAudioMixerGroup = Resources.Load<AudioMixer>("Sounds/Master").FindMatchingGroups("Master")[0];
         ASound.pitch = Random.Range(0.9f, 1.2f);
         ASound.Play();
         Sound.AddComponent<AudiosDefault>();
@@ -65,6 +67,7 @@ public class MusicManager : MonoBehaviour
         AudioSource ASound = Sound.AddComponent<AudioSource>();
         ASound.spatialBlend = 1;
         ASound.clip = Resources.Load("Sounds/Enviroment/Door/Door" + nameOfDoorSound) as AudioClip;
+        ASound.outputAudioMixerGroup = Resources.Load<AudioMixer>("Sounds/Master").FindMatchingGroups("Master")[0];
         ASound.pitch = Random.Range(0.9f, 1.2f);
         ASound.Play();
         Sound.AddComponent<AudiosDefault>();
@@ -77,6 +80,7 @@ public class MusicManager : MonoBehaviour
         AudioSource ASound = Sound.AddComponent<AudioSource>();
         ASound.spatialBlend = 1;
         ASound.clip = Resources.Load("Sounds/Enviroment/StickFall") as AudioClip;
+        ASound.outputAudioMixerGroup = Resources.Load<AudioMixer>("Sounds/Master").FindMatchingGroups("Master")[0];
         ASound.pitch = Random.Range(0.9f, 1.2f);
         ASound.Play();
         Sound.AddComponent<AudiosDefault>();
@@ -87,6 +91,7 @@ public class MusicManager : MonoBehaviour
         Sound.transform.parent = interactions;
         AudioSource ASound = Sound.AddComponent<AudioSource>();
         ASound.clip = Resources.Load("Sounds/Enviroment/ButtonPush") as AudioClip;
+        ASound.outputAudioMixerGroup = Resources.Load<AudioMixer>("Sounds/Master").FindMatchingGroups("Master")[0];
         ASound.pitch = Random.Range(0.9f, 1.2f);
         ASound.Play();
         Sound.AddComponent<AudiosDefault>();
@@ -101,6 +106,7 @@ public class MusicManager : MonoBehaviour
         AudioSource ASound = Sound.AddComponent<AudioSource>();
         ASound.spatialBlend = 1;
         ASound.clip = Resources.Load("Sounds/Ambient/ClownLaugh") as AudioClip;
+        ASound.outputAudioMixerGroup = Resources.Load<AudioMixer>("Sounds/Master").FindMatchingGroups("Master")[0];
         ASound.pitch = Random.Range(0.9f, 1.2f);
         instance.StartCoroutine(AddScarePoints(0.5f, 0.5f));
         ASound.Play();
@@ -112,6 +118,7 @@ public class MusicManager : MonoBehaviour
         Sound.transform.parent = ambient;
         AudioSource ASound = Sound.AddComponent<AudioSource>();
         ASound.clip = Resources.Load("Sounds/Ambient/BattleHorns") as AudioClip;
+        ASound.outputAudioMixerGroup = Resources.Load<AudioMixer>("Sounds/Master").FindMatchingGroups("Master")[0];
         ASound.pitch = Random.Range(0.9f, 1.2f);
         instance.StartCoroutine(AddScarePoints(0.3f, 1f));
         ASound.Play();
@@ -123,6 +130,7 @@ public class MusicManager : MonoBehaviour
         Sound.transform.parent = ambient;
         AudioSource ASound = Sound.AddComponent<AudioSource>();
         ASound.clip = Resources.Load("Sounds/Ambient/ScaryViolinsShort") as AudioClip;
+        ASound.outputAudioMixerGroup = Resources.Load<AudioMixer>("Sounds/Master").FindMatchingGroups("Master")[0];
         ASound.volume = 0.5f;
         instance.StartCoroutine(AddScarePoints(0.8f, 1f));
         ASound.Play();
@@ -134,6 +142,7 @@ public class MusicManager : MonoBehaviour
         Sound.transform.parent = ambient;
         AudioSource ASound = Sound.AddComponent<AudioSource>();
         ASound.clip = Resources.Load("Sounds/Ambient/ClownLaugh") as AudioClip;
+        ASound.outputAudioMixerGroup = Resources.Load<AudioMixer>("Sounds/Master").FindMatchingGroups("Master")[0];
         ASound.panStereo = 1;
         ASound.volume = 1f;
         instance.StartCoroutine(AddScarePoints(0.8f, 1f));
@@ -146,6 +155,7 @@ public class MusicManager : MonoBehaviour
         Sound.transform.parent = ambient;
         AudioSource ASound = Sound.AddComponent<AudioSource>();
         ASound.clip = Resources.Load("Sounds/Ambient/JumpScare") as AudioClip;
+        ASound.outputAudioMixerGroup = Resources.Load<AudioMixer>("Sounds/Master").FindMatchingGroups("Master")[0];
         ASound.pitch = Random.Range(0.9f, 1.2f);
         ASound.volume = 0.2f;
         instance.StartCoroutine(AddScarePoints(1f, 1f));

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FP_Aim : FP
 {
-    float mouseSensitivity = 100f;
+    public static float mouseSensitivity = 100f;
     float xRotation = 0f;
 
     void Start()

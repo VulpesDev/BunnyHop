@@ -138,15 +138,15 @@ MonoBehaviour:
     m_Value: 1
   gaussianStart:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 4
     min: 0
   gaussianEnd:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 40
     min: 0
   gaussianMaxRadius:
     m_OverrideState: 1
-    m_Value: 1.5
+    m_Value: 0.5
     min: 0.5
     max: 1.5
   highQualitySampling:
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: GameObject Profile
+  m_Name: Profile2
   m_EditorClassIdentifier: 
   components:
   - {fileID: -9143420228408467938}
