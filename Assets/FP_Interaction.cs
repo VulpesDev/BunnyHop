@@ -62,6 +62,10 @@ public class FP_Interaction : FP
                     }
                     MusicManager.ButtonPush();
                 }
+                if(target.CompareTag("Bunny"))
+                {
+                    GameObject.Find("Cutscenes").transform.GetChild(1).gameObject.SetActive(true);
+                }
             }
         }
         else

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class AudioZone : MonoBehaviour
 {
-    bool horn, violin, laugh;
+    bool horn, violin, laugh, change;
+    [SerializeField]GameObject room1, room2;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -23,6 +24,11 @@ public class AudioZone : MonoBehaviour
             {
                 MusicManager.ClownLaugh();
                 laugh = true;
+            }
+            if (name == "ChangeRoom" && !change)
+            {
+                room1.SetActive(false);
+                room2.SetActive(true);
             }
         }
     }

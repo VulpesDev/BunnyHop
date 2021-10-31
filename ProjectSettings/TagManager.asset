@@ -10,6 +10,9 @@ TagManager:
   - BroomRoom
   - Cage
   - Boombox
+  - room2
+  - room1
+  - Bunny
   layers:
   - Default
   - TransparentFX
