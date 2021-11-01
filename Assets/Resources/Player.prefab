@@ -458,3 +458,7 @@ MonoBehaviour:
   layerCode:
     serializedVersion: 2
     m_Bits: 0
+  cage: {fileID: 0}
+  cagefake: {fileID: 0}
+  notepadUI: {fileID: 0}
+  notepad: {fileID: 0}
